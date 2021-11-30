@@ -1,6 +1,6 @@
-export default function CookieStandHeader() {
+export default function Header() {
     return (
-        <header className=''>
+        <header className="text-left bg-green-500">
             <h1>
                 Cookie Stand Admin
             </h1>

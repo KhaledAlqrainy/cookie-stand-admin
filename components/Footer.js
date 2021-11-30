@@ -1,5 +1,5 @@
 export default function Footer() {
     return (
-        <footer className=''>Khaled @2021</footer>
+        <footer className='bg-green'>@2021</footer>
     )
 }

@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
-import Stand from './Stand';
+import Result from './Result';
+import styles from '../styles/Home.module.css'
 
 
-function Main(){
+export default function Main(){
 
     const [stand, setStand] = React.useState({
         location : 'New location..',
@@ -25,13 +26,14 @@ function Main(){
     }
 
     return(
+
         <main className={styles.main}>
            
-            <form onSubmit={handelSubmit} className='' >
-                <h2 className='' >Create Cookie Stand</h2>
+            <form onSubmit={handelSubmit} className='bg-green-200' >
+                <h2 className='font-medium text-center' >Create Cookie Stand</h2>
                 <label className='' >Location</label>
                 <input className="" placeholder={stand.location}  type="text" id = 'location' /> <br/>
-                <div className='' >
+                <div className='grid grid-cols-3 float-left ' >
                     <label className='' >Minimum Customer per Hour</label>
                     <label className='' >Maximum Customer per Hour</label>
                     <label className='' >Average Cookies per Sale </label>
@@ -40,12 +42,10 @@ function Main(){
                     <input className='' placeholder={stand.max} name="max" type="number" id = 'max' />
                     <input className='' placeholder={stand.avg} name="avg" type="number" id = 'avg' />
                 </div>
-                <button className='' type='submit' >Create</button>
+                <button className='text-white bg-green-500' type='submit' >Create</button>
             </form>
-            <p className='' >Report Table Coming Soon... </p>
-            <Stand stand={stand} />
+            <p className='text-grey-600' >Report Table Coming Soon... </p>
+            <Result stand={stand} />
       </main>
     )
 }
-
-export default Main;
